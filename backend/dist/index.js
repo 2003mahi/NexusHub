@@ -20,6 +20,7 @@ app.use((req, res, next) => {
 const careers_1 = require("./careers");
 const community_1 = require("./community");
 const academy_1 = __importDefault(require("./academy"));
+const submit_1 = require("./submit");
 app.use('/api/careers', (0, careers_1.createCareersRouter)());
 app.use('/api/community', (0, community_1.createCommunityRouter)());
 app.use('/api/academy', academy_1.default);
@@ -27,6 +28,7 @@ const impact_1 = require("./impact");
 const contact_1 = require("./contact");
 app.use('/api/impact', (0, impact_1.createImpactRouter)());
 app.use('/api/contact', (0, contact_1.createContactRouter)());
+app.use('/api/submit', (0, submit_1.createSubmitRouter)());
 // Health check endpoint
 app.get('/health', (_req, res) => {
     res.status(200).json({ status: 'ok', service: 'nexushub-backend' });
