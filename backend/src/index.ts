@@ -20,6 +20,7 @@ import { createCareersRouter } from './careers';
 import { createCommunityRouter } from './community';
 import academyRouter from './academy';
 import { createVenturesRouter } from './ventures';
+import { createSubmitRouter } from './submit';
 
 app.use('/api/careers', createCareersRouter());
 app.use('/api/community', createCommunityRouter());
@@ -29,6 +30,7 @@ import { createContactRouter } from './contact';
 
 app.use('/api/impact', createImpactRouter());
 app.use('/api/contact', createContactRouter());
+app.use('/api/submit', createSubmitRouter());
 
 // Health check endpoint
 app.get('/health', (_req: Request, res: Response) => {
